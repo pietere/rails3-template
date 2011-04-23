@@ -1,0 +1,58 @@
+@import "blueprint/interaction";
+@import "blueprint/typography";
+@import "blueprint/fancy_type";
+@import "blueprint/grid";
+@import "blueprint/buttons";
+
+body {
+  @include fancy-type;
+}
+
+.top {
+	background-color: $blueprint-background-color
+}
+
+.menu {
+	ul {
+		float: left;
+		list-style: none;
+		margin:0;
+		padding:0;
+	}
+	li {
+		float: left;
+		a {
+			border-size:1px;
+			padding:10px;
+			border:solid 1px;
+			text-decoration:none;
+			display:block;
+			@include button-colors;
+			@include button-hover-colors;
+		}
+		&.current a {
+			background-color: $blueprint-button-active-background-color;
+			color: $blueprint-button-active-font-color;
+		}
+	}
+}
+
+.main{
+  @include column(24, true);
+}
+
+.flash {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  @extend .flash;
+  @include success;
+}
+
+#flash_alert {
+  @extend .flash;
+  @include error;
+}
+
