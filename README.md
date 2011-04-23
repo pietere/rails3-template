@@ -8,7 +8,11 @@ Clone the template and have a look at its code. Don't blindly trust it since it 
 
 Take into account that this is currently a work in progress and is not 100% finished. So, some things might not work as expected... or might not work at all.
 
-# Gems
+# Gems and config
+
+## RVM
+
+The template will create an RVM gemset named after your application using ruby 1.8.7 EE by default.
 
 ## General use
 
@@ -39,3 +43,8 @@ Take into account that this is currently a work in progress and is not 100% fini
 
 We took many ideas from the [aentos template](https://github.com/aentos/rails3-templates)
 
+## TODO
+
+* Install [rack-debug](https://github.com/ddollar/rack-debug).
+* Generate devise.
+* Ask options for RVM instead of using ree by default
